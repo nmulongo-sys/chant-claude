@@ -108,6 +108,75 @@ textarea{width:100%;min-height:120px;background:#0f1a22;color:var(--text);
 footer{color:var(--text-dim);font-size:11.5px;text-align:center;padding:18px 0 8px}
 .kbd{font-family:ui-monospace,monospace;background:#0f1a22;border:1px solid var(--line);
   border-radius:5px;padding:1px 6px;font-size:12px}
+
+/* mic + gauge */
+.btn.mic{background:var(--panel-2)}
+.btn.mic.live{background:var(--coral);color:#2a1410;border-color:var(--coral)}
+.gauge{margin:6px 0 2px}
+.gauge-scale{display:flex;justify-content:space-between;font-size:11px;color:var(--text-dim);
+  font-family:ui-monospace,monospace;margin-bottom:3px}
+.gauge-track{position:relative;height:26px;background:#0f1a22;border:1px solid var(--line);
+  border-radius:6px;overflow:hidden}
+.gauge-zone{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);
+  background:rgba(130,169,138,.22);border-left:1px solid var(--sage);border-right:1px solid var(--sage)}
+.gauge-mid{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,.25)}
+.gauge-needle{position:absolute;top:-2px;bottom:-2px;width:3px;left:50%;
+  background:var(--brass);border-radius:2px;transition:left .06s linear,background .1s;box-shadow:0 0 6px rgba(202,162,79,.6)}
+.gauge-needle.off{background:var(--text-dim);box-shadow:none}
+.gauge-read{display:flex;align-items:baseline;gap:10px;margin-top:7px}
+.gauge-read .note{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:30px;font-weight:600;line-height:1}
+.gauge-read .reg{color:var(--text-dim);font-size:13px}
+.gauge-read .cents{font-family:ui-monospace,monospace;font-size:15px;margin-left:auto}
+.gauge-read .cents.ok{color:var(--sage)}
+.gauge-read .cents.hi{color:var(--coral)}
+.gauge-read .cents.lo{color:#e0b46a}
+
+/* studio */
+.studio-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-bottom:1px solid var(--line)}
+.studio-item:last-child{border-bottom:none}
+.studio-item .lab{font-weight:600;min-width:74px}
+.studio-item .lab .reg{color:var(--text-dim);font-weight:400;font-size:12px}
+.studio-item .sp{flex:1}
+.badge{font-size:12px;padding:3px 9px;border-radius:999px;background:#0f1a22;border:1px solid var(--line);color:var(--text-dim)}
+.badge.ok{background:rgba(130,169,138,.16);border-color:var(--sage);color:var(--sage)}
+.studio-item button{padding:6px 10px;font-size:13px}
+.studio-list{border:1px solid var(--line);border-radius:8px;max-height:340px;overflow-y:auto;background:var(--panel)}
+.rec-target{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:20px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);margin-right:6px;
+  animation:blink 1s steps(2,start) infinite}
+@keyframes blink{50%{opacity:.25}}
+
+/* --- Chant : mode exercice --- */
+.mode-switch{padding-top:11px;padding-bottom:11px}
+.exo-target{display:flex;align-items:baseline;gap:10px;margin:4px 0 2px}
+.exo-target .big{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:28px;font-weight:600;line-height:1;color:var(--brass)}
+.exo-target .lab{color:var(--text-dim);font-size:12.5px}
+.exo-count{font-family:ui-monospace,monospace;color:var(--text-dim);font-size:13px;margin-left:auto}
+#scoreWrap3{background:var(--paper);border-radius:var(--r);padding:8px 6px;overflow-x:auto}
+#score3 svg{max-width:100%;height:auto}
+#score3 .abcjs-note.hl{fill:var(--coral)!important}
+#score3 .abcjs-note.done-ok{fill:var(--sage)!important}
+#score3 .abcjs-note.done-bad{fill:var(--coral)!important}
+#score3 .abcjs-note.done-oct{fill:#e0b46a!important}
+.results{border:1px solid var(--line);border-radius:var(--r);padding:14px;background:#0f1a22}
+.results .big{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:40px;font-weight:600;line-height:1}
+.results .big.good{color:var(--sage)}
+.results .big.mid{color:#e0b46a}
+.results .big.low{color:var(--coral)}
+.results .sumrow{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin:8px 0 12px}
+.results .stat{font-size:13px;color:var(--text-dim)}
+.results .stat b{color:var(--text);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;border-radius:6px;padding:3px 8px;border:1px solid var(--line);background:var(--panel-2);color:var(--text-dim);font-family:ui-monospace,monospace}
+.chip b{color:var(--text);font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:13px}
+.chip.ok{border-color:var(--sage);color:var(--sage)}
+.chip.bad{border-color:var(--coral);color:var(--coral)}
+.chip.oct{border-color:#e0b46a;color:#e0b46a}
+.chip.mute{opacity:.5}
+.hist .h{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.hist .h:last-child{border-bottom:0}
+.hist .h .pct{font-family:ui-monospace,monospace;color:var(--brass);font-weight:600;min-width:46px}
+.hist .h .d{color:var(--text-dim);font-size:12px;margin-left:auto}
 </style>
 </head>
 <body>
@@ -228,23 +297,156 @@ footer{color:var(--text-dim);font-size:11.5px;text-align:center;padding:18px 0 8
 
 <!-- ============ CHANT ============ -->
 <section role="tabpanel" id="tab-chant">
-  <div class="card"><h2>Chant &amp; jauge de justesse</h2>
-    <div class="soon">
-      <b>Prochaine itération.</b> Détection de hauteur au micro (autocorrélation type YIN, hors-ligne),
-      jauge en cents (±50), notation juste/haut/bas par note, et score final par exercice.
-      Le module de détection est mutualisé avec la validation du <b>Studio</b>.
+  <div class="card mode-switch">
+    <div class="row" style="align-items:center">
+      <label class="fld">Mode
+        <div class="seg" role="group" aria-label="Mode Chant">
+          <button id="cmTune" aria-pressed="true">Accordeur</button>
+          <button id="cmExo" aria-pressed="false">Exercice</button>
+        </div></label>
+      <span class="hint" style="flex:1;min-width:190px">Accordeur : une note tenue. Exercice : la partition défile, tu chantes, chaque note est notée.</span>
     </div>
+  </div>
+
+  <div class="card" id="chantTuneCard">
+    <h2>Accordeur — écoute ta justesse</h2>
+    <p class="sub">Chante une note tenue : la jauge indique la note détectée et l'écart en cents. Active « grave » pour fiabiliser sous do3.</p>
+    <div class="row">
+      <button class="btn mic" id="micBtn">🎤 Activer le micro</button>
+      <label class="fld">Plage
+        <div class="seg" role="group" aria-label="Plage de détection">
+          <button id="rNorm" aria-pressed="true">Normale</button>
+          <button id="rLow">Grave</button>
+        </div></label>
+      <span class="pill" id="micPill">micro éteint</span>
+    </div>
+    <div class="gauge" style="margin-top:14px">
+      <div class="gauge-scale"><span>−50</span><span>juste</span><span>+50</span></div>
+      <div class="gauge-track">
+        <div class="gauge-zone" id="cZone"></div>
+        <div class="gauge-mid"></div>
+        <div class="gauge-needle off" id="cNeedle"></div>
+      </div>
+      <div class="gauge-read">
+        <span class="note" id="cNote">—</span>
+        <span class="reg" id="cReg"></span>
+        <span class="cents" id="cCents">·</span>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:10px">Autorise l'accès au micro quand le navigateur le demande. Rien n'est enregistré ni envoyé : l'analyse est locale.</p>
+  </div>
+
+  <div class="card" id="chantExoCard" style="display:none">
+    <h2>Exercice chanté — note ta justesse</h2>
+    <p class="sub">La partition défile à ton tempo ; chante chaque note, un décompte te lance. À la fin, un score de justesse. L'exercice est celui chargé dans l'onglet Partition, adapté à ta tessiture.</p>
+    <div class="row">
+      <button class="btn prim" id="exoStart">▶ Commencer</button>
+      <button class="btn" id="exoStop" disabled>■ Arrêter</button>
+      <span class="pill" id="exoPill">prêt</span>
+    </div>
+    <div class="row" style="margin-top:11px">
+      <label class="fld" style="flex:1;min-width:180px">Tempo — <span class="mono" id="exoBpmTxt">66</span> BPM
+        <input type="range" id="exoBpm" min="30" max="140" value="66" step="1"></label>
+      <label class="fld" style="flex:1;min-width:160px">Tolérance — ±<span class="mono" id="exoTolTxt">35</span> cents
+        <input type="range" id="exoTol" min="15" max="60" value="35" step="5"></label>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <label class="fld">Métronome
+        <div class="seg" role="group" aria-label="Métronome">
+          <button id="exoClickOn" aria-pressed="true">Clic</button>
+          <button id="exoClickOff">Muet</button>
+        </div></label>
+      <label class="fld">Repère sonore
+        <div class="seg" role="group" aria-label="Repère sonore">
+          <button id="exoGuideOff" aria-pressed="true">Sans</button>
+          <button id="exoGuideOn">Note guide</button>
+        </div></label>
+    </div>
+
+    <div class="exo-target" style="margin-top:14px">
+      <span class="lab">À chanter :</span>
+      <span class="big" id="exoTarget">—</span>
+      <span class="exo-count" id="exoCount"></span>
+    </div>
+    <div class="gauge">
+      <div class="gauge-scale"><span>−50</span><span>juste</span><span>+50</span></div>
+      <div class="gauge-track">
+        <div class="gauge-zone" id="eZone"></div>
+        <div class="gauge-mid"></div>
+        <div class="gauge-needle off" id="eNeedle"></div>
+      </div>
+      <div class="gauge-read">
+        <span class="note" id="eNote">—</span>
+        <span class="reg" id="eReg"></span>
+        <span class="cents" id="eCents">·</span>
+      </div>
+    </div>
+
+    <div style="margin-top:12px"><div id="scoreWrap3"><div id="score3"></div></div></div>
+
+    <div id="exoResults" style="display:none;margin-top:14px"></div>
+
+    <div class="card" style="background:#0f1a22;margin-top:14px;margin-bottom:0">
+      <h2 style="font-size:14px;margin-bottom:6px">Historique — cet exercice</h2>
+      <div class="hist" id="exoHist"><p class="hint">Pas encore de tentative pour cet exercice.</p></div>
+    </div>
+    <p class="hint" style="margin-top:10px">Rien n'est enregistré ni envoyé : l'analyse du micro est locale. Seuls tes scores (chiffres) sont gardés sur l'appareil.</p>
   </div>
 </section>
 
 <!-- ============ STUDIO ============ -->
 <section role="tabpanel" id="tab-studio">
-  <div class="card"><h2>Studio — enregistrer ma voix</h2>
-    <div class="soon">
-      <b>Prochaine itération.</b> Enregistrement guidé note par note (MediaRecorder), validation par la jauge de pitch
-      (±30 cents réglable), trim + fade-out 10&nbsp;ms, stockage <b>IndexedDB</b> par numéro MIDI,
-      export/import du kit vocal en JSON. Cascade audio&nbsp;: kit perso → kit embarqué → synthèse.
+  <div class="card">
+    <h2>Studio — enregistrer ma voix</h2>
+    <p class="sub">Un échantillon chanté par note, à sa hauteur native (aucun étirement). La jauge valide chaque prise. Stockage sur l'appareil.</p>
+    <div class="row">
+      <span class="pill" id="dbPill">base : connexion…</span>
+      <span class="pill" id="kitPill">kit : —</span>
     </div>
+    <div class="row" style="margin-top:11px">
+      <button class="btn" id="expKit">Exporter le kit (JSON)</button>
+      <button class="btn" id="impKitBtn">Importer un kit…</button>
+      <input type="file" id="impKit" accept=".json" hidden>
+      <button class="btn" id="clrKit">Vider le kit</button>
+    </div>
+    <p class="hint" style="margin-top:8px">La tessiture se règle dans l'onglet <b>Partition</b> (<span id="studTess"></span>). La liste ci-dessous en découle.</p>
+  </div>
+
+  <div class="card" id="recCard" style="display:none">
+    <h2>Enregistrement</h2>
+    <div class="row" style="align-items:center">
+      <span>Chante&nbsp;: <span class="rec-target" id="recTarget">—</span></span>
+      <span class="pill" id="recState">prêt</span>
+    </div>
+    <div class="gauge" style="margin-top:12px">
+      <div class="gauge-scale"><span>−50</span><span>juste</span><span>+50</span></div>
+      <div class="gauge-track">
+        <div class="gauge-zone" id="sZone"></div>
+        <div class="gauge-mid"></div>
+        <div class="gauge-needle off" id="sNeedle"></div>
+      </div>
+      <div class="gauge-read">
+        <span class="note" id="sNote">—</span>
+        <span class="reg" id="sReg"></span>
+        <span class="cents" id="sCents">·</span>
+      </div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn prim" id="recStart">● Enregistrer</button>
+      <button class="btn" id="recStop" disabled>■ Arrêter</button>
+      <button class="btn" id="recPlay" disabled>▶ Réécouter</button>
+      <button class="btn" id="recSave" disabled>Garder</button>
+      <button class="btn" id="recCancel" disabled>Annuler</button>
+    </div>
+    <div class="row" style="margin-top:9px">
+      <label class="fld" style="flex:1;min-width:200px">Tolérance — ±<span class="mono" id="tolTxt">30</span> cents
+        <input type="range" id="tol" min="10" max="50" value="30" step="5"></label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Kit vocal</h2>
+    <div class="studio-list" id="studioList"></div>
   </div>
 </section>
 
@@ -405,6 +607,26 @@ const syll = m => NOTE_NAMES_FR[((m%12)+12)%12]; // nom chanté : syllabe seule,
 const midiToFreq = m => 440*Math.pow(2,(m-69)/12);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
+// --- YIN pitch detection (validated) ---
+function yinDetect(buf, sr, opts){
+  opts=opts||{}; const threshold=opts.threshold!=null?opts.threshold:0.12;
+  const N=buf.length, halfN=Math.floor(N/2); const yin=new Float32Array(halfN);
+  for(let tau=0;tau<halfN;tau++){ let sum=0; for(let i=0;i<halfN;i++){ const d=buf[i]-buf[i+tau]; sum+=d*d; } yin[tau]=sum; }
+  yin[0]=1; let running=0;
+  for(let tau=1;tau<halfN;tau++){ running+=yin[tau]; yin[tau]*= tau/running; }
+  let tau=-1;
+  for(let t=2;t<halfN;t++){ if(yin[t]<threshold){ while(t+1<halfN&&yin[t+1]<yin[t])t++; tau=t; break; } }
+  if(tau===-1){ let min=Infinity,mi=-1; for(let t=2;t<halfN;t++){ if(yin[t]<min){min=yin[t];mi=t;} } if(mi===-1||min>0.5)return null; tau=mi; }
+  let bt=tau;
+  if(tau>0&&tau<halfN-1){ const s0=yin[tau-1],s1=yin[tau],s2=yin[tau+1]; const den=2*(2*s1-s2-s0); if(den!==0)bt=tau+(s2-s0)/den; }
+  const freq=sr/bt, clarity=1-yin[tau];
+  return {freq,clarity};
+}
+function freqToMidiCents(freq){
+  const midiF=69+12*Math.log2(freq/440); const midi=Math.round(midiF);
+  return {midi,cents:Math.round((midiF-midi)*100),midiF};
+}
+
 // ---------- state ----------
 const state = {
   abc:"",              // source ABC (user text)
@@ -431,6 +653,8 @@ document.querySelectorAll(".tab").forEach(b=>{
     document.querySelectorAll("section[role=tabpanel]").forEach(s=>s.classList.remove("on"));
     $("#tab-"+b.dataset.tab).classList.add("on");
     if(b.dataset.tab==="ecoute"){ renderScore("score2"); }
+    if(b.dataset.tab==="studio"){ if(DB.h) buildStudioList(); }
+    if(b.dataset.tab==="chant"){ if(typeof exoOnEnter==="function") exoOnEnter(); }
   });
 });
 
@@ -447,8 +671,8 @@ fillNoteSelect($("#tMin"),state.tMin);
 fillNoteSelect($("#tMax"),state.tMax);
 function saveTess(){ try{localStorage.setItem("cj_tess",JSON.stringify({min:state.tMin,max:state.tMax}));}catch(e){} }
 function updTessPill(){ $("#tessPill").innerHTML="tessiture : <b>"+midiName(state.tMin)+" → "+midiName(state.tMax)+"</b>"; }
-$("#tMin").addEventListener("change",e=>{ state.tMin=+e.target.value; if(state.tMin>=state.tMax){state.tMax=state.tMin+1;fillNoteSelect($("#tMax"),state.tMax);} saveTess();updTessPill();recompute(); });
-$("#tMax").addEventListener("change",e=>{ state.tMax=+e.target.value; if(state.tMax<=state.tMin){state.tMin=state.tMax-1;fillNoteSelect($("#tMin"),state.tMin);} saveTess();updTessPill();recompute(); });
+$("#tMin").addEventListener("change",e=>{ state.tMin=+e.target.value; if(state.tMin>=state.tMax){state.tMax=state.tMin+1;fillNoteSelect($("#tMax"),state.tMax);} saveTess();updTessPill();recompute(); if(DB.h)buildStudioList(); });
+$("#tMax").addEventListener("change",e=>{ state.tMax=+e.target.value; if(state.tMax<=state.tMin){state.tMin=state.tMax-1;fillNoteSelect($("#tMin"),state.tMin);} saveTess();updTessPill();recompute(); if(DB.h)buildStudioList(); });
 updTessPill();
 
 // ---------- MIDI computation from abcjs tune ----------
@@ -714,7 +938,7 @@ function schedulePlayback(fromIdx){
   let t=c.currentTime+0.08; player.startAt=t; player.idx=fromIdx;
   for(let i=fromIdx;i<state.events.length;i++){
     const e=state.events[i]; const dur=scaleDur(e.durSec);
-    if(e.midi!=null){ voiceNote(midiToFreq(e.midi+shift), t, Math.max(dur*0.92,0.08)); }
+    if(e.midi!=null){ playNoteAt(e.midi+shift, t, dur); }
     t+=dur;
   }
   // stop marker
@@ -765,7 +989,7 @@ function stepPlayOne(){
   while(player.idx<state.events.length && state.events[player.idx].midi==null) player.idx++;
   if(player.idx>=state.events.length){ stopPlay(); return; }
   const e=state.events[player.idx]; const shift=decideShiftAndClef(state.events).shift;
-  const c=ac(); voiceNote(midiToFreq(e.midi+shift), c.currentTime+0.03, 0.6); say(syll(e.midi+shift));
+  const c=ac(); playNoteAt(e.midi+shift, c.currentTime+0.03, 0.6); say(syll(e.midi+shift));
   // highlight nth note
   const notes=document.querySelectorAll("#score2 .abcjs-note");
   notes.forEach(n=>n.classList.remove("hl"));
@@ -796,9 +1020,516 @@ $("#mStep").onclick=()=>{ state.playMode="step"; press("#tab-ecoute .seg [id^=m]
 $("#sayOn").onclick=()=>{ state.say=true; press("[id^=say]","#sayOn"); };
 $("#sayOff").onclick=()=>{ state.say=false; press("[id^=say]","#sayOff"); };
 
-// ---------- boot ----------
+// ================= PITCH ENGINE (shared: Chant tuner + Studio validation) =================
+const pitch = {
+  running:false, stream:null, ctx:null, analyser:null, buf:null, raf:0,
+  hist:[], low:false, subscribers:[]
+};
+async function pitchStart(){
+  if(pitch.running) return true;
+  try{
+    pitch.stream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+  }catch(e){ return false; }
+  pitch.ctx = pitch.ctx || new (window.AudioContext||window.webkitAudioContext)();
+  await pitch.ctx.resume();
+  const src = pitch.ctx.createMediaStreamSource(pitch.stream);
+  pitch.analyser = pitch.ctx.createAnalyser();
+  pitch.analyser.fftSize = pitch.low ? 4096 : 2048;
+  pitch.buf = new Float32Array(pitch.analyser.fftSize);
+  src.connect(pitch.analyser);
+  pitch.running = true; pitch.hist = [];
+  loopPitch();
+  return true;
+}
+function pitchStop(){
+  pitch.running=false; cancelAnimationFrame(pitch.raf);
+  if(pitch.stream){ pitch.stream.getTracks().forEach(t=>t.stop()); pitch.stream=null; }
+  emitPitch(null);
+}
+function setLow(v){ pitch.low=v; if(pitch.running&&pitch.analyser){ pitch.analyser.fftSize=v?4096:2048; pitch.buf=new Float32Array(pitch.analyser.fftSize); } }
+function loopPitch(){
+  if(!pitch.running) return;
+  pitch.analyser.getFloatTimeDomainData(pitch.buf);
+  // RMS gate
+  let rms=0; for(let i=0;i<pitch.buf.length;i++) rms+=pitch.buf[i]*pitch.buf[i];
+  rms=Math.sqrt(rms/pitch.buf.length);
+  let det=null;
+  if(rms>0.008){
+    const r=yinDetect(pitch.buf, pitch.ctx.sampleRate, {});
+    if(r && r.clarity>0.90 && r.freq>60 && r.freq<1200){ det=freqToMidiCents(r.freq); det.clarity=r.clarity; }
+  }
+  // median smoothing over 5 frames (on midiF)
+  if(det){ pitch.hist.push(det.midiF); if(pitch.hist.length>5)pitch.hist.shift();
+    const s=[...pitch.hist].sort((a,b)=>a-b); const med=s[Math.floor(s.length/2)];
+    const midi=Math.round(med); det={midi, cents:Math.round((med-midi)*100), midiF:med, clarity:det.clarity};
+  } else { pitch.hist=[]; }
+  emitPitch(det);
+  pitch.raf=requestAnimationFrame(loopPitch);
+}
+function emitPitch(det){ pitch.subscribers.forEach(fn=>{ try{fn(det);}catch(e){} }); }
+function onPitch(fn){ pitch.subscribers.push(fn); return ()=>{ pitch.subscribers=pitch.subscribers.filter(f=>f!==fn); }; }
+
+// ---- gauge update ----
+function updateGauge(ids, det, tol){
+  const needle=$(ids.needle), note=$(ids.note), reg=$(ids.reg), cents=$(ids.cents), zone=$(ids.zone);
+  if(zone){ zone.style.width=(tol*2/100*100)+"%"; } // tol cents over ±50 range → % of track width
+  if(!det){ needle.classList.add("off"); needle.style.left="50%"; note.textContent="—"; if(reg)reg.textContent=""; cents.textContent="·"; cents.className="cents"; return; }
+  needle.classList.remove("off");
+  const pos = clamp(50 + (det.cents/50)*50, 2, 98); needle.style.left=pos+"%";
+  note.textContent = syll(det.midi);
+  if(reg) reg.textContent = midiName(det.midi);
+  const within = Math.abs(det.cents)<=tol;
+  needle.style.background = within ? "var(--sage)" : "var(--brass)";
+  cents.textContent = (det.cents>=0?"+":"")+det.cents+"c";
+  cents.className = "cents "+(within?"ok":(det.cents>0?"hi":"lo"));
+}
+
+// ---- Chant tuner ----
+(function(){
+  const ids={needle:"#cNeedle",note:"#cNote",reg:"#cReg",cents:"#cCents",zone:"#cZone"};
+  updateGauge(ids,null,20);
+  onPitch(det=>{ if($("#tab-chant").classList.contains("on")) updateGauge(ids,det,20); });
+  $("#micBtn").onclick=async()=>{
+    if(pitch.running){ pitchStop(); $("#micBtn").classList.remove("live"); $("#micBtn").textContent="🎤 Activer le micro"; $("#micPill").textContent="micro éteint"; return; }
+    $("#micPill").textContent="autorisation…";
+    const ok=await pitchStart();
+    if(!ok){ $("#micPill").textContent="micro refusé"; return; }
+    $("#micBtn").classList.add("live"); $("#micBtn").textContent="🎤 Couper le micro"; $("#micPill").textContent="à l'écoute";
+  };
+  $("#rNorm").onclick=()=>{ setLow(false); document.querySelectorAll("#rNorm,#rLow").forEach(b=>b.setAttribute("aria-pressed","false")); $("#rNorm").setAttribute("aria-pressed","true"); };
+  $("#rLow").onclick=()=>{ setLow(true); document.querySelectorAll("#rNorm,#rLow").forEach(b=>b.setAttribute("aria-pressed","false")); $("#rLow").setAttribute("aria-pressed","true"); };
+})();
+
+// ================= INDEXEDDB (vocal kit) =================
+const DB={name:"ChantJustesseDB",store:"samples",scoreStore:"scores",v:2,h:null};
+function dbOpen(){
+  return new Promise((res,rej)=>{
+    const rq=indexedDB.open(DB.name,DB.v);
+    rq.onupgradeneeded=e=>{ const d=e.target.result;
+      if(!d.objectStoreNames.contains(DB.store)) d.createObjectStore(DB.store,{keyPath:"midi"});
+      if(!d.objectStoreNames.contains(DB.scoreStore)){ const os=d.createObjectStore(DB.scoreStore,{keyPath:"id",autoIncrement:true}); os.createIndex("ex","ex",{unique:false}); }
+    };
+    rq.onsuccess=e=>{ DB.h=e.target.result; res(DB.h); };
+    rq.onerror=e=>rej(e.target.error);
+  });
+}
+function dbPut(rec){ return new Promise((res,rej)=>{ const t=DB.h.transaction([DB.store],"readwrite"); t.objectStore(DB.store).put(rec); t.oncomplete=()=>res(); t.onerror=e=>rej(e.target.error); }); }
+function dbGetAll(){ return new Promise((res)=>{ if(!DB.h)return res([]); const t=DB.h.transaction([DB.store],"readonly"); const rq=t.objectStore(DB.store).getAll(); rq.onsuccess=()=>res(rq.result||[]); rq.onerror=()=>res([]); }); }
+function dbDelete(midi){ return new Promise((res)=>{ const t=DB.h.transaction([DB.store],"readwrite"); t.objectStore(DB.store).delete(midi); t.oncomplete=()=>res(); }); }
+function dbClear(){ return new Promise((res)=>{ const t=DB.h.transaction([DB.store],"readwrite"); t.objectStore(DB.store).clear(); t.oncomplete=()=>res(); }); }
+function scorePut(rec){ return new Promise((res,rej)=>{ const t=DB.h.transaction([DB.scoreStore],"readwrite"); t.objectStore(DB.scoreStore).add(rec); t.oncomplete=()=>res(); t.onerror=e=>rej(e.target.error); }); }
+function scoresByEx(ex){ return new Promise((res)=>{ if(!DB.h)return res([]); const t=DB.h.transaction([DB.scoreStore],"readonly"); const rq=t.objectStore(DB.scoreStore).index("ex").getAll(ex); rq.onsuccess=()=>res(rq.result||[]); rq.onerror=()=>res([]); }); }
+
+// ================= DSP + WAV =================
+function audioBufToMonoFloat(ab){
+  const ch=ab.numberOfChannels, len=ab.length, out=new Float32Array(len);
+  for(let c=0;c<ch;c++){ const d=ab.getChannelData(c); for(let i=0;i<len;i++) out[i]+=d[i]/ch; }
+  return out;
+}
+function trimAndFade(data, sr){
+  // trim leading silence (threshold -40 dBFS ≈ 0.01), keep 5 ms pre-roll
+  const thr=0.01; let start=0;
+  for(let i=0;i<data.length;i++){ if(Math.abs(data[i])>thr){ start=Math.max(0,i-Math.floor(sr*0.005)); break; } }
+  // trim trailing silence
+  let end=data.length; for(let i=data.length-1;i>=0;i--){ if(Math.abs(data[i])>thr){ end=Math.min(data.length,i+Math.floor(sr*0.02)); break; } }
+  let out=data.slice(start,end);
+  // normalize peak to -1 dBFS
+  let peak=0; for(let i=0;i<out.length;i++) peak=Math.max(peak,Math.abs(out[i]));
+  if(peak>0){ const g=Math.pow(10,-1/20)/peak; for(let i=0;i<out.length;i++) out[i]*=g; }
+  // fade-out 10 ms, no fade-in (preserve transient)
+  const f=Math.min(Math.floor(sr*0.010),out.length);
+  for(let i=0;i<f;i++){ out[out.length-1-i]*= i/f; }
+  return out;
+}
+function encodeWav(data, sr){
+  const n=data.length, bytes=44+n*2, ab=new ArrayBuffer(bytes), dv=new DataView(ab);
+  const wr=(o,s)=>{ for(let i=0;i<s.length;i++) dv.setUint8(o+i,s.charCodeAt(i)); };
+  wr(0,"RIFF"); dv.setUint32(4,36+n*2,true); wr(8,"WAVE"); wr(12,"fmt "); dv.setUint32(16,16,true);
+  dv.setUint16(20,1,true); dv.setUint16(22,1,true); dv.setUint32(24,sr,true); dv.setUint32(28,sr*2,true);
+  dv.setUint16(32,2,true); dv.setUint16(34,16,true); wr(36,"data"); dv.setUint32(40,n*2,true);
+  let o=44; for(let i=0;i<n;i++){ const s=clamp(data[i],-1,1); dv.setInt16(o,s<0?s*0x8000:s*0x7FFF,true); o+=2; }
+  return new Blob([ab],{type:"audio/wav"});
+}
+function blobToB64(blob){ return new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result.split(",")[1]); r.readAsDataURL(blob); }); }
+function b64ToBlob(b64,mime){ const bin=atob(b64); const u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i); return new Blob([u],{type:mime||"audio/wav"}); }
+
+// ================= KIT (in-memory decoded buffers for playback) =================
+const kit={ buffers:{}, count:0 };
+async function loadKit(){
+  const rows=await dbGetAll(); kit.buffers={}; kit.count=rows.length;
+  const c=ac();
+  for(const r of rows){
+    try{ const arr=await r.wav.arrayBuffer(); const ab=await c.decodeAudioData(arr.slice(0)); kit.buffers[r.midi]=ab; }catch(e){}
+  }
+  updKitPill();
+}
+function updKitPill(){ const p=$("#kitPill"); if(p)p.textContent="kit : "+kit.count+" note"+(kit.count>1?"s":""); }
+
+// ================= STUDIO =================
+const studio={ rec:null, chunks:[], target:null, lastWav:null, lastBuf:null, medMidi:null, unsub:null };
+function studTessTxt(){ const t=$("#studTess"); if(t)t.textContent=midiName(state.tMin)+" → "+midiName(state.tMax); }
+async function buildStudioList(){
+  studTessTxt();
+  const rows=await dbGetAll(); const have={}; rows.forEach(r=>have[r.midi]=true);
+  kit.count=rows.length;
+  const L=$("#studioList"); L.innerHTML="";
+  for(let m=state.tMin;m<=state.tMax;m++){
+    const item=document.createElement("div"); item.className="studio-item";
+    const lab=document.createElement("div"); lab.className="lab"; lab.innerHTML=syll(m)+" <span class='reg'>"+midiName(m)+"</span>";
+    const sp=document.createElement("div"); sp.className="sp";
+    const badge=document.createElement("span"); badge.className="badge"+(have[m]?" ok":""); badge.textContent=have[m]?"✓ enregistré":"vide"; badge.id="b-"+m;
+    const btn=document.createElement("button"); btn.className="btn"; btn.textContent="● Enregistrer"; btn.onclick=()=>armRecording(m);
+    item.appendChild(lab); item.appendChild(sp); item.appendChild(badge); item.appendChild(btn); L.appendChild(item);
+  }
+  updKitPill();
+}
+function armRecording(midi){
+  studio.target=midi; $("#recCard").style.display="";
+  $("#recTarget").textContent=syll(midi)+"  "; const r=document.createElement("span"); r.className="reg";
+  $("#recTarget").innerHTML=syll(midi)+" <span class='reg'>"+midiName(midi)+"</span>";
+  $("#recState").textContent="prêt — appuie sur Enregistrer";
+  $("#recCard").scrollIntoView({behavior:"smooth",block:"center"});
+  updateGauge({needle:"#sNeedle",note:"#sNote",reg:"#sReg",cents:"#sCents",zone:"#sZone"},null,tol());
+  resetRecButtons({start:false,stop:true,play:true,save:true,cancel:true});
+}
+function tol(){ return +$("#tol").value; }
+function resetRecButtons(dis){ $("#recStart").disabled=dis.start; $("#recStop").disabled=dis.stop; $("#recPlay").disabled=dis.play; $("#recSave").disabled=dis.save; $("#recCancel").disabled=dis.cancel; }
+
+$("#tol").addEventListener("input",()=>{ $("#tolTxt").textContent=tol(); });
+
+$("#recStart").onclick=async()=>{
+  if(studio.target==null) return;
+  const ok=await pitchStart(); if(!ok){ $("#recState").textContent="micro refusé"; return; }
+  // live gauge + collect detections
+  const ids={needle:"#sNeedle",note:"#sNote",reg:"#sReg",cents:"#sCents",zone:"#sZone"};
+  const dets=[];
+  studio.unsub && studio.unsub();
+  studio.unsub=onPitch(det=>{ updateGauge(ids,det,tol()); if(det)dets.push(det.midiF); });
+  studio._dets=dets;
+  // MediaRecorder on same stream
+  const mime = window.MediaRecorder && MediaRecorder.isTypeSupported("audio/webm;codecs=opus") ? "audio/webm;codecs=opus"
+             : (window.MediaRecorder && MediaRecorder.isTypeSupported("audio/mp4") ? "audio/mp4" : "");
+  studio.chunks=[];
+  try{ studio.rec=new MediaRecorder(pitch.stream, mime?{mimeType:mime}:undefined); }
+  catch(e){ $("#recState").textContent="enregistrement non supporté"; return; }
+  studio.rec.ondataavailable=e=>{ if(e.data.size)studio.chunks.push(e.data); };
+  studio.rec.onstop=onRecStop;
+  studio.rec.start();
+  $("#recState").innerHTML="<span class='dot'></span>enregistrement…";
+  resetRecButtons({start:true,stop:false,play:true,save:true,cancel:false});
+};
+$("#recStop").onclick=()=>{ if(studio.rec&&studio.rec.state!=="inactive") studio.rec.stop(); };
+async function onRecStop(){
+  studio.unsub && studio.unsub(); studio.unsub=null;
+  const dets=studio._dets||[];
+  const blob=new Blob(studio.chunks,{type:studio.chunks[0]?studio.chunks[0].type:"audio/webm"});
+  // decode -> mono -> trim/fade -> wav
+  try{
+    const arr=await blob.arrayBuffer(); const ab=await ac().decodeAudioData(arr.slice(0));
+    const mono=audioBufToMonoFloat(ab); const proc=trimAndFade(mono, ab.sampleRate);
+    studio.lastWav=encodeWav(proc, ab.sampleRate);
+    const c=ac(); const pb=c.createBuffer(1,proc.length,ab.sampleRate); pb.copyToChannel(proc,0); studio.lastBuf=pb;
+  }catch(e){ $("#recState").textContent="décodage impossible : "+e.message; return; }
+  // validation: median detected pitch vs target
+  let verdict="", pass=false;
+  if(dets.length){
+    const s=[...dets].sort((a,b)=>a-b); const med=s[Math.floor(s.length/2)];
+    const midi=Math.round(med), cents=Math.round((med-midi)*100); studio.medMidi=midi;
+    if(midi===studio.target && Math.abs(cents)<=tol()){ pass=true; verdict="✓ juste ("+(cents>=0?"+":"")+cents+"c) — chanté "+syll(midi); }
+    else if(midi!==studio.target){ verdict="⚠ note détectée "+syll(midi)+" ≠ cible "+syll(studio.target)+" — reprends ou garde quand même"; }
+    else { verdict="⚠ écart "+(cents>=0?"+":"")+cents+"c > ±"+tol()+" — reprends ou garde quand même"; }
+  } else { verdict="⚠ aucune hauteur détectée — reprends"; }
+  $("#recState").textContent=verdict;
+  resetRecButtons({start:false,stop:true,play:false,save:false,cancel:false});
+  if(pass){ await saveTake(); } // auto-accept on pass
+}
+$("#recPlay").onclick=()=>{ if(!studio.lastBuf)return; const c=ac(); const s=c.createBufferSource(); s.buffer=studio.lastBuf; s.connect(c.destination); s.start(); };
+$("#recSave").onclick=()=>saveTake();
+$("#recCancel").onclick=()=>{ studio.lastWav=null; studio.lastBuf=null; $("#recState").textContent="annulé"; resetRecButtons({start:false,stop:true,play:true,save:true,cancel:true}); };
+async function saveTake(){
+  if(!studio.lastWav||studio.target==null) return;
+  await dbPut({midi:studio.target, wav:studio.lastWav, mime:"audio/wav", date:new Date().toISOString()});
+  const b=$("#b-"+studio.target); if(b){ b.classList.add("ok"); b.textContent="✓ enregistré"; }
+  $("#recState").textContent="gardé : "+syll(studio.target)+" "+midiName(studio.target);
+  resetRecButtons({start:false,stop:true,play:false,save:true,cancel:true});
+  await loadKit();
+}
+
+// export / import kit
+$("#expKit").onclick=async()=>{
+  const rows=await dbGetAll(); if(!rows.length){ alert("Kit vide."); return; }
+  const out={app:"chant-justesse",version:1,tessiture:{min:state.tMin,max:state.tMax},samples:{}};
+  for(const r of rows){ out.samples[r.midi]={b64:await blobToB64(r.wav),mime:r.mime||"audio/wav"}; }
+  const blob=new Blob([JSON.stringify(out)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="kit-vocal.json"; a.click();
+};
+$("#impKitBtn").onclick=()=>$("#impKit").click();
+$("#impKit").addEventListener("change",async e=>{
+  const f=e.target.files[0]; if(!f)return;
+  try{
+    const j=JSON.parse(await f.text());
+    if(!j.samples) throw new Error("format inconnu");
+    for(const midi in j.samples){ const s=j.samples[midi]; await dbPut({midi:+midi,wav:b64ToBlob(s.b64,s.mime),mime:s.mime||"audio/wav",date:new Date().toISOString()}); }
+    await buildStudioList(); await loadKit();
+    $("#recState") && ($("#dbPill").textContent="base : kit importé");
+  }catch(err){ alert("Import : "+err.message); }
+  e.target.value="";
+});
+$("#clrKit").onclick=async()=>{ if(!confirm("Vider tout le kit vocal ?"))return; await dbClear(); await buildStudioList(); await loadKit(); };
+
+// ================= AUDIO CASCADE (playback resolver) =================
+function playNoteAt(absMidi, when, durSec){
+  const c=ac();
+  const b=kit.buffers[absMidi];
+  if(b){
+    const s=c.createBufferSource(); s.buffer=b;
+    const g=c.createGain(); s.connect(g); g.connect(c.destination);
+    const dur=Math.min(durSec, b.duration);
+    g.gain.setValueAtTime(1,when);
+    g.gain.setValueAtTime(1,Math.max(when,when+dur-0.03));
+    g.gain.linearRampToValueAtTime(0.0001,when+dur);
+    s.start(when); s.stop(when+dur+0.02);
+  } else {
+    voiceNote(midiToFreq(absMidi), when, Math.max(durSec*0.92,0.08));
+  }
+}
+// ================= CHANT : mode exercice + score =================
+const exo={ run:false, times:[], startAt:0, total:0, cur:-1, nNotes:0,
+  lastDet:null, lastDetAt:0, unsub:null, bpm:66, tol:35, click:true, guide:false };
+
+function exoBeatSec(){ return 60/exo.bpm; }
+function exoScale(durSec90){ return durSec90*(90/exo.bpm); }
+function exoStatus(t){ const p=$("#exoPill"); if(p)p.textContent=t; }
+function exoHashAbc(a){ let h=0; for(let i=0;i<a.length;i++){ h=(h*31+a.charCodeAt(i))|0; } return "e"+(h>>>0).toString(36); }
+function exoTitle(){ const m=state.abc.match(/^T:(.*)$/m); return m&&m[1].trim()?m[1].trim():"Sans titre"; }
+
+function exoMode(on){
+  const ex=$("#chantExoCard"), tu=$("#chantTuneCard");
+  if(!ex||!tu) return;
+  ex.style.display=on?"":"none"; tu.style.display=on?"none":"";
+  $("#cmExo").setAttribute("aria-pressed",on?"true":"false");
+  $("#cmTune").setAttribute("aria-pressed",on?"false":"true");
+  if(on){ exoRenderScore(); exoLoadHist(); } else { exoStop(false); }
+}
+function exoOnEnter(){
+  const b=$("#cmExo"); if(b&&b.getAttribute("aria-pressed")==="true"){ exoRenderScore(); exoLoadHist(); }
+}
+
+function exoRenderScore(){
+  const el=$("#score3"); if(!el) return;
+  if(!state.abc.trim()){ el.innerHTML="<div style='color:#6b8;padding:12px'>Charge d'abord un exercice dans l'onglet Partition.</div>"; state.tune3=null; return; }
+  const d=decideShiftAndClef(state.events);
+  const renderAbc=deriveRenderAbc(state.abc, state.clefMode==="auto"||state.clefMode!=="keep"?d.clef:null);
+  try{
+    const t=window.ABCJS.renderAbc("score3", renderAbc, {responsive:"resize",visualTranspose:d.shift,add_classes:true,paddingtop:6,paddingbottom:6,paddingleft:2,paddingright:2});
+    state.tune3=t[0];
+  }catch(e){ el.innerHTML="<div style='color:#a33;padding:10px'>Rendu impossible : "+e.message+"</div>"; }
+}
+function exoNodes(){ return document.querySelectorAll("#score3 .abcjs-note, #score3 .abcjs-rest"); }
+function exoClearMarks(){ exoNodes().forEach(n=>n.classList.remove("hl","done-ok","done-bad","done-oct")); }
+function exoHighlight(idx){ const nodes=exoNodes(); nodes.forEach(n=>n.classList.remove("hl")); if(nodes[idx]) nodes[idx].classList.add("hl"); }
+
+function exoBeep(when, accent){
+  const c=ac(); const o=c.createOscillator(), g=c.createGain();
+  o.frequency.value=accent?1320:880; o.connect(g); g.connect(c.destination);
+  g.gain.setValueAtTime(0.0001,when);
+  g.gain.exponentialRampToValueAtTime(accent?0.16:0.09,when+0.005);
+  g.gain.exponentialRampToValueAtTime(0.0001,when+0.06);
+  o.start(when); o.stop(when+0.08);
+}
+
+async function exoStart(){
+  if(exo.run) return;
+  if(!state.events.length){ exoStatus("charge un exercice"); return; }
+  exoRenderScore(); exoClearMarks();
+  const box=$("#exoResults"); if(box){ box.style.display="none"; box.innerHTML=""; }
+  const ok=await pitchStart(); if(!ok){ exoStatus("micro refusé"); return; }
+  const c=ac(); if(c.resume){ try{ await c.resume(); }catch(e){} }
+  const shift=decideShiftAndClef(state.events).shift;
+  const beat=exoBeatSec();
+  exo.times=[]; let tcum=0, ord=0;
+  state.events.forEach((ev,i)=>{
+    const dur=exoScale(ev.durSec);
+    const target=ev.midi!=null?ev.midi+shift:null;
+    if(target!=null) ord++;
+    exo.times.push({i,on:tcum,off:tcum+dur,dur,target,ord:target!=null?ord:null,samples:[],verdict:null,dev:0,rawDev:0,sungMidi:null});
+    tcum+=dur;
+  });
+  exo.total=tcum; exo.nNotes=ord; exo.cur=-1; exo.lastDet=null;
+  if(exo.nNotes===0){ exoStatus("aucune note à chanter"); pitchStop(); return; }
+  exo.unsub && exo.unsub();
+  exo.unsub=onPitch(det=>{ exo.lastDet=det; exo.lastDetAt=ac().currentTime; });
+  // count-in (always audible, 4 beats)
+  const t0=c.currentTime+0.2, cb=4;
+  for(let b=0;b<cb;b++) exoBeep(t0+b*beat, b===0);
+  exo.startAt=t0+cb*beat;
+  if(exo.click){ for(let t=0;t<exo.total-1e-6;t+=beat) exoBeep(exo.startAt+t,false); }
+  if(exo.guide){ exo.times.forEach(w=>{ if(w.target!=null) playNoteAt(w.target, exo.startAt+w.on+0.001, Math.min(w.dur*0.9,0.6)); }); }
+  exo.run=true;
+  $("#exoStart").disabled=true; $("#exoStop").disabled=false;
+  exoUpdateGauge(null,null);
+  requestAnimationFrame(exoLoop);
+}
+
+function exoLoop(){
+  if(!exo.run) return;
+  const c=ac(); const el=c.currentTime-exo.startAt;
+  if(el<0){ exoStatus("prêt… "+Math.max(1,Math.ceil(-el/exoBeatSec()))); requestAnimationFrame(exoLoop); return; }
+  if(el>=exo.total){ exoFinish(); return; }
+  let idx=-1;
+  for(let k=0;k<exo.times.length;k++){ if(el>=exo.times[k].on && el<exo.times[k].off){ idx=k; break; } }
+  if(idx===-1){ requestAnimationFrame(exoLoop); return; }
+  if(idx!==exo.cur){
+    if(exo.cur>=0) exoFinalizeNote(exo.cur);
+    exo.cur=idx; exoHighlight(idx); exoStatus("en cours");
+    const w=exo.times[idx];
+    if(w.target!=null){
+      $("#exoTarget").innerHTML=syll(w.target)+" <span class='lab'>"+midiName(w.target)+"</span>";
+      $("#exoCount").textContent="note "+w.ord+" / "+exo.nNotes;
+    } else { $("#exoTarget").textContent="— silence —"; $("#exoCount").textContent=""; }
+  }
+  const w=exo.times[idx];
+  const fresh = exo.lastDet && (c.currentTime-exo.lastDetAt)<0.15;
+  if(w.target!=null && fresh && el>=w.on+w.dur*0.30){ w.samples.push(exo.lastDet.midiF); }
+  exoUpdateGauge(w, fresh?exo.lastDet:null);
+  requestAnimationFrame(exoLoop);
+}
+
+function exoGradeWindow(w){
+  if(w.target==null){ w.verdict="rest"; return; }
+  if(w.samples.length<2){ w.verdict="muet"; w.dev=0; w.rawDev=0; return; }
+  const s=[...w.samples].sort((a,b)=>a-b); const m=s[Math.floor(s.length/2)];
+  const raw=Math.round((m-w.target)*100); const fold=raw-1200*Math.round(raw/1200);
+  w.rawDev=raw; w.dev=fold; w.sungMidi=Math.round(m);
+  if(Math.abs(fold)>exo.tol) w.verdict=fold>0?"haut":"bas";
+  else if(Math.abs(raw)<=exo.tol) w.verdict="juste";
+  else w.verdict="octave";
+}
+function exoFinalizeNote(k){
+  const w=exo.times[k]; if(!w||w.verdict!==null) return;
+  exoGradeWindow(w);
+  const n=exoNodes()[k];
+  if(n){ n.classList.remove("hl");
+    if(w.verdict==="juste") n.classList.add("done-ok");
+    else if(w.verdict==="octave") n.classList.add("done-oct");
+    else if(w.verdict==="haut"||w.verdict==="bas"||w.verdict==="muet") n.classList.add("done-bad");
+  }
+}
+
+function exoUpdateGauge(w, det){
+  const needle=$("#eNeedle"), note=$("#eNote"), reg=$("#eReg"), cents=$("#eCents"), zone=$("#eZone");
+  if(!needle) return;
+  if(zone) zone.style.width=(exo.tol*2)+"%";
+  if(!det || w==null || w.target==null){
+    needle.classList.add("off"); needle.style.left="50%";
+    note.textContent="—"; if(reg)reg.textContent=""; cents.textContent="·"; cents.className="cents"; return;
+  }
+  needle.classList.remove("off");
+  const raw=(det.midiF-w.target)*100; const fold=raw-1200*Math.round(raw/1200);
+  const pos=clamp(50+(fold/50)*50,2,98); needle.style.left=pos+"%";
+  note.textContent=syll(det.midi); if(reg) reg.textContent=midiName(det.midi);
+  const within=Math.abs(fold)<=exo.tol;
+  needle.style.background=within?"var(--sage)":"var(--brass)";
+  cents.textContent=(fold>=0?"+":"")+Math.round(fold)+"c";
+  cents.className="cents "+(within?"ok":(fold>0?"hi":"lo"));
+}
+
+function exoStop(fromFinish){
+  exo.run=false;
+  exo.unsub && exo.unsub(); exo.unsub=null;
+  pitchStop();
+  const mb=$("#micBtn"); if(mb){ mb.classList.remove("live"); mb.textContent="🎤 Activer le micro"; }
+  const mp=$("#micPill"); if(mp) mp.textContent="micro éteint";
+  const sb=$("#exoStart"), tb=$("#exoStop");
+  if(sb) sb.disabled=false; if(tb) tb.disabled=true;
+  exoUpdateGauge(null,null);
+  if(!fromFinish){ exoStatus("arrêté"); exoClearMarks(); $("#exoCount").textContent=""; $("#exoTarget").textContent="—"; }
+  else exoStatus("terminé");
+}
+
+function exoFinish(){
+  if(exo.cur>=0) exoFinalizeNote(exo.cur);
+  exo.times.forEach(w=>{ if(w.target!=null && w.verdict===null) exoGradeWindow(w); });
+  exoStop(true);
+  exoShowResults();
+}
+
+function exoShowResults(){
+  const notes=exo.times.filter(w=>w.target!=null);
+  const N=notes.length;
+  const nJuste=notes.filter(w=>w.verdict==="juste").length;
+  const nOct=notes.filter(w=>w.verdict==="octave").length;
+  const nHaut=notes.filter(w=>w.verdict==="haut").length;
+  const nBas=notes.filter(w=>w.verdict==="bas").length;
+  const nMute=notes.filter(w=>w.verdict==="muet").length;
+  const sung=notes.filter(w=>w.verdict!=="muet");
+  const meanC=sung.length?Math.round(sung.reduce((a,w)=>a+Math.abs(w.dev),0)/sung.length):0;
+  const pct=N?Math.round(nJuste/N*100):0;
+  const cls=pct>=80?"good":pct>=50?"mid":"low";
+  let chips="";
+  notes.forEach(w=>{
+    const c=w.verdict==="juste"?"ok":w.verdict==="octave"?"oct":w.verdict==="muet"?"mute":"bad";
+    const dv=w.verdict==="muet"?"—":((w.dev>=0?"+":"")+Math.round(w.dev)+"c");
+    chips+="<span class='chip "+c+"'><b>"+syll(w.target)+"</b> "+dv+"</span>";
+  });
+  let html="<div class='results'>";
+  html+="<div class='big "+cls+"'>"+pct+"% <span style='font-size:16px;color:var(--text-dim)'>justes</span></div>";
+  html+="<div class='sumrow'>";
+  html+="<span class='stat'><b>"+nJuste+"</b> / "+N+" justes</span>";
+  html+="<span class='stat'>écart moyen <b>±"+meanC+"c</b></span>";
+  if(nHaut) html+="<span class='stat'>"+nHaut+" trop haut</span>";
+  if(nBas) html+="<span class='stat'>"+nBas+" trop bas</span>";
+  if(nOct) html+="<span class='stat'>"+nOct+" bonne note, autre octave</span>";
+  if(nMute) html+="<span class='stat'>"+nMute+" non chanté</span>";
+  html+="</div><div class='chips'>"+chips+"</div>";
+  html+="<div class='row' style='margin-top:12px'><button class='btn prim' id='exoAgain'>↺ Rejouer</button></div></div>";
+  const box=$("#exoResults"); box.innerHTML=html; box.style.display="";
+  $("#exoAgain").onclick=exoStart;
+  exoSaveScore(pct,meanC,N,nJuste);
+}
+
+async function exoSaveScore(pct,meanC,N,nJuste){
+  if(!DB.h) return;
+  try{ await scorePut({ex:exoHashAbc(state.abc), title:exoTitle(), date:new Date().toISOString(), pct:pct, meanCents:meanC, nNotes:N, nJuste:nJuste, tol:exo.tol, bpm:exo.bpm}); }catch(e){}
+  exoLoadHist();
+}
+async function exoLoadHist(){
+  const box=$("#exoHist"); if(!box) return;
+  const rows=await scoresByEx(exoHashAbc(state.abc));
+  if(!rows.length){ box.innerHTML="<p class='hint'>Pas encore de tentative pour cet exercice.</p>"; return; }
+  rows.sort((a,b)=>b.date.localeCompare(a.date));
+  box.innerHTML=rows.slice(0,8).map(r=>{
+    const d=new Date(r.date);
+    const ds=d.toLocaleDateString("fr-FR")+" "+d.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+    return "<div class='h'><span class='pct'>"+r.pct+"%</span><span>±"+r.meanCents+"c · "+r.nJuste+"/"+r.nNotes+" · "+r.bpm+" BPM</span><span class='d'>"+ds+"</span></div>";
+  }).join("");
+}
+
+function exoInit(){
+  if(!$("#cmExo")) return;
+  $("#cmTune").onclick=()=>exoMode(false);
+  $("#cmExo").onclick=()=>exoMode(true);
+  $("#exoStart").onclick=exoStart;
+  $("#exoStop").onclick=()=>exoStop(false);
+  $("#exoBpm").addEventListener("input",e=>{ exo.bpm=+e.target.value; $("#exoBpmTxt").textContent=e.target.value; });
+  $("#exoTol").addEventListener("input",e=>{ exo.tol=+e.target.value; $("#exoTolTxt").textContent=e.target.value; exoUpdateGauge(null,null); });
+  $("#exoClickOn").onclick=()=>{ exo.click=true; press("[id^=exoClick]","#exoClickOn"); };
+  $("#exoClickOff").onclick=()=>{ exo.click=false; press("[id^=exoClick]","#exoClickOff"); };
+  $("#exoGuideOff").onclick=()=>{ exo.guide=false; press("[id^=exoGuide]","#exoGuideOff"); };
+  $("#exoGuideOn").onclick=()=>{ exo.guide=true; press("[id^=exoGuide]","#exoGuideOn"); };
+  exoUpdateGauge(null,null);
+}
+exoInit();
+
+
 window.addEventListener("resize",()=>{ const d=decideShiftAndClef(state.events); drawLadder(d.exMin,d.exMax); });
 $("#btnExA").click(); // load a starter so the app isn't empty
+studTessTxt();
+dbOpen().then(async()=>{
+  $("#dbPill").textContent="base : prête";
+  await loadKit();
+  await buildStudioList();
+}).catch(()=>{ $("#dbPill").textContent="base : indisponible"; });
 })();
 </script>
 </body>
